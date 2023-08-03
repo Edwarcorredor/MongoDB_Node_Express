@@ -1,6 +1,6 @@
 use("db_limit_mongo");
 db.createCollection("usuario", {
-    capped: false,
+    capped: true,
     size: 690,
     max: 5
 })

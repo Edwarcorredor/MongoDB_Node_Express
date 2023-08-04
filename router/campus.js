@@ -26,8 +26,8 @@ appCampus.post('/', limitGet(), async (req, res) => {
         res.send(":)");
     } catch (error){
 
-        console.log(error);
-        res.send(":(")
+        console.log(error.errInfo.details.schemaRulesNotSatisfied[0].propertiesNotSatisfied[0].description);
+        res.send(error.errInfo.details.schemaRulesNotSatisfied[0].propertiesNotSatisfied[0].description)
     }
 });
 

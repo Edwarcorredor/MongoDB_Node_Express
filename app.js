@@ -5,7 +5,7 @@ import  appCampus  from "./router/campus.js"
 dotenv.config();
 
 let app = express();
-
+app.use(express.json());
 app.use("/campus", appCampus);
 
 
